@@ -7,6 +7,7 @@ class Nodo
 	Nodo izqda;
 	Nodo drcha;
 	Nodo padre;
+	
 	public Nodo()
 	{
 		izqda = drcha= null;
@@ -15,6 +16,9 @@ class Nodo
 	{
 		dato = x;
 		izqda = drcha = null;
+	}
+	public void setDato(int da){
+		dato=da;
 	}
 	public Nodo buscarNodo(int buscado)
 	{

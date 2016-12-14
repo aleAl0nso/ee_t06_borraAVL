@@ -13,7 +13,7 @@ static BufferedReader entrada=new BufferedReader(new InputStreamReader(System.in
 		int elem;
 	do
 	{
-		System.out.println("-----ARBOLESAVL Hecho Por Juan Antonio Juarez Olivera------");
+		
 		System.out.println("Elija la opcion que desea:");	
 		System.out.println();
 		System.out.println("1.-Ingresar un elemento");

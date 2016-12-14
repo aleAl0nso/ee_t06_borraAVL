@@ -4,13 +4,48 @@ class ArbolAVL
 {
 	
 	
-	Nodo nuevo, raiz, temp, temp2;
-	int altura=0; int altura2=0;
+	Nodo nuevo;
+	static Nodo raiz;
+	Nodo temp;
+	Nodo temp2;
+	static int altura=0; int altura2=0;
 	public ArbolAVL()
 	{
 		nuevo = null;
 		raiz = null;
 	}
+	/*public static void main (String []args){
+		
+		raiz=new Nodo();
+		raiz.setDato(50);;
+		raiz.izqda.setDato(20);
+		raiz.izqda.izqda.setDato(11);
+		raiz.drcha.setDato(59);
+		raiz.drcha.drcha.setDato(70);;
+		raiz.drcha.drcha.izqda.setDato(60);;
+		 int al=altura(raiz, 0);
+		
+	}*/
+	
+	public static int altura(Nodo raiz, int altura){
+        altura = altura + 1;
+        int izquierda, derecha;
+        if (raiz != null){
+
+            izquierda = altura(raiz.izqda, altura);
+            derecha = altura(raiz.drcha,altura);
+         }else{
+             return -1;
+         }
+        if (izquierda > derecha){
+        	System.out.println("El nivel del arbol es: "+altura+" y es por la izquierda");
+          return izquierda +1;
+        }
+        else
+        	System.out.println("El nivel del arbol es: "+altura+" y es por la derecha");
+          return derecha+1; 
+    }
+	
 	
 	public void alta(int dato) 
 	{
